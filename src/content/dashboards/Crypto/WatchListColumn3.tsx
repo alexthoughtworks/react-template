@@ -40,14 +40,14 @@ function WatchListColumn3() {
       <Box sx={{ p: 3 }}>
         <Box display="flex" alignItems="center">
           <AvatarWrapper>
-            <img alt="ADA" src="/static/images/placeholders/logo/cardano.png" />
+           
           </AvatarWrapper>
           <Box>
             <Typography variant="h4" noWrap>
-              Cardano
+            Barbecue Burger
             </Typography>
             <Typography variant="subtitle1" noWrap>
-              ADA
+            American, raw, meaty
             </Typography>
           </Box>
         </Box>

@@ -40,14 +40,14 @@ function WatchListColumn1() {
       <Box sx={{ p: 3 }}>
         <Box display="flex" alignItems="center">
           <AvatarWrapper>
-            <img alt="BTC" src="/static/images/placeholders/logo/bitcoin.png" />
+            
           </AvatarWrapper>
           <Box>
             <Typography variant="h4" noWrap>
-              Bitcoin
+              Sushi
             </Typography>
             <Typography variant="subtitle1" noWrap>
-              BTC
+            Finest fish and veggies
             </Typography>
           </Box>
         </Box>

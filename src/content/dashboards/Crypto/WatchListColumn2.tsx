@@ -40,10 +40,7 @@ function WatchListColumn2() {
       <Box sx={{ p: 3 }}>
         <Box display="flex" alignItems="center">
           <AvatarWrapper>
-            <img
-              alt="ETH"
-              src="/static/images/placeholders/logo/ethereum.png"
-            />
+           
           </AvatarWrapper>
           <Box>
             <Typography variant="h4" noWrap>

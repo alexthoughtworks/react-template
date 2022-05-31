@@ -77,17 +77,12 @@ function Wallets() {
         <Grid xs={12} sm={6} md={3} item>
           <Card sx={{ px: 1 }}>
             <CardContent>
-              <AvatarWrapper>
-                <img
-                  alt="BTC"
-                  src="/static/images/placeholders/logo/bitcoin.png"
-                />
-              </AvatarWrapper>
+              
               <Typography variant="h5" noWrap>
-                Bitcoin
+                Sushi
               </Typography>
               <Typography variant="subtitle1" noWrap>
-                BTC
+                Finest fish and veggies
               </Typography>
               <Box sx={{ pt: 3 }}>
                 <Typography variant="h3" gutterBottom noWrap>
@@ -103,17 +98,12 @@ function Wallets() {
         <Grid xs={12} sm={6} md={3} item>
           <Card sx={{ px: 1 }}>
             <CardContent>
-              <AvatarWrapper>
-                <img
-                  alt="Ripple"
-                  src="/static/images/placeholders/logo/ripple.png"
-                />
-              </AvatarWrapper>
+              
               <Typography variant="h5" noWrap>
-                Ripple
+              Schnitzel
               </Typography>
               <Typography variant="subtitle1" noWrap>
-                XRP
+              A german specialty!
               </Typography>
               <Box sx={{ pt: 3 }}>
                 <Typography variant="h3" gutterBottom noWrap>
@@ -129,17 +119,12 @@ function Wallets() {
         <Grid xs={12} sm={6} md={3} item>
           <Card sx={{ px: 1 }}>
             <CardContent>
-              <AvatarWrapper>
-                <img
-                  alt="Cardano"
-                  src="/static/images/placeholders/logo/cardano.png"
-                />
-              </AvatarWrapper>
+              
               <Typography variant="h5" noWrap>
-                Cardano
+              Barbecue Burger
               </Typography>
               <Typography variant="subtitle1" noWrap>
-                ADA
+              American, raw, meaty
               </Typography>
               <Box sx={{ pt: 3 }}>
                 <Typography variant="h3" gutterBottom noWrap>

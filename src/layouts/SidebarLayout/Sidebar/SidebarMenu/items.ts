@@ -44,7 +44,7 @@ const menuItems: MenuItems[] = [
     heading: 'Dashboards',
     items: [
       {
-        name: 'Crypto',
+        name: 'Meals',
         link: '/dashboards/crypto',
         icon: BrightnessLowTwoToneIcon
       },
