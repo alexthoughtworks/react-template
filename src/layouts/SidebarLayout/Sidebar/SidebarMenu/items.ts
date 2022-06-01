@@ -48,13 +48,14 @@ const menuItems: MenuItems[] = [
         link: '/dashboards/crypto',
         icon: BrightnessLowTwoToneIcon
       },
-      {
+      /*{
         name: 'Messenger',
         icon: MmsTwoToneIcon,
         link: '/dashboards/messenger'
-      },
+      },*/
     ]
   },
+  /*
   {
     heading: 'Management',
     items: [
@@ -157,7 +158,7 @@ const menuItems: MenuItems[] = [
         ]
       }
     ]
-  }
+  }*/
 ];
 
 export default menuItems;

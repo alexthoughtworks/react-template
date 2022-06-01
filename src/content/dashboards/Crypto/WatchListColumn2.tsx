@@ -44,10 +44,10 @@ function WatchListColumn2() {
           </AvatarWrapper>
           <Box>
             <Typography variant="h4" noWrap>
-              Ethereum
+            Schnitzel
             </Typography>
             <Typography variant="subtitle1" noWrap>
-              ETH
+            A german specialty!
             </Typography>
           </Box>
         </Box>

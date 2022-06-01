@@ -64,7 +64,7 @@ function Wallets() {
         justifyContent="space-between"
         sx={{ pb: 3 }}
       >
-        <Typography variant="h3">Wallets</Typography>
+        <Typography variant="h3">Most Sold Meals</Typography>
         <Button
           size="small"
           variant="outlined"
