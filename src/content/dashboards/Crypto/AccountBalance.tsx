@@ -17,23 +17,8 @@ import { styled } from '@mui/material/styles';
 import TrendingUp from '@mui/icons-material/TrendingUp';
 import AccountBalanceChart from './AccountBalanceChart';
 import Text from 'src/components/Text';
-import {useQuery, gql} from "@apollo/client";
-import { useEffect, useState } from 'react';
 
-const GET_ORDERS = gql`
-query {
-  ordersSummary {
-    count,
-    total
-  }
-}
-query {
-  productsSummary {
-    id,
-    total
-  }
-}
-`
+
 
 const AccountBalanceChartWrapper = styled(AccountBalanceChart)(
   () => `
