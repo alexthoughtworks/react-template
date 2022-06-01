@@ -17,6 +17,23 @@ import { styled } from '@mui/material/styles';
 import TrendingUp from '@mui/icons-material/TrendingUp';
 import AccountBalanceChart from './AccountBalanceChart';
 import Text from 'src/components/Text';
+import {useQuery, gql} from "@apollo/client";
+import { useEffect, useState } from 'react';
+
+const GET_ORDERS = gql`
+query {
+  ordersSummary {
+    count,
+    total
+  }
+}
+query {
+  productsSummary {
+    id,
+    total
+  }
+}
+`
 
 const AccountBalanceChartWrapper = styled(AccountBalanceChart)(
   () => `
@@ -34,12 +51,17 @@ const AvatarSuccess = styled(Avatar)(
 `
 );
 
-function AccountBalance() {
-  
+function AccountBalance({sushi, schnitzel, burger, green, total, count,sum}) {
+ 
+  const sushiPer = Math.ceil(sushi/sum*100);
+  const schnitzelPer = Math.ceil(schnitzel/sum*100);
+  const burgerPer = Math.ceil(burger/sum*100)
+  const greenPer = Math.ceil(green/sum*100)
+ 
   const cryptoBalance = {
     datasets: [
       {
-        data: [10, 50, 10, 30],
+        data: [sushiPer, schnitzelPer , burgerPer, greenPer],
         backgroundColor: ['#ff9900', '#1c81c2', '#333', '#5c6ac0']
       }
     ],
@@ -56,14 +78,14 @@ function AccountBalance() {
             </Typography>
             <Box>
               <Typography variant="h1" gutterBottom>
-                $54,584.23
+                ${total.toFixed(2)}
               </Typography>
               <Typography
                 variant="h4"
                 fontWeight="normal"
                 color="text.secondary"
               >
-                number orders: 63257236
+                number orders: {count}
               </Typography>
               
             </Box>
@@ -118,9 +140,61 @@ function AccountBalance() {
                     />
                     <Box>
                       <Typography align="right" variant="h4" noWrap>
-                        50%
+                        {sushiPer}%
                       </Typography>
-                      <Text color="success">+2.54%</Text>
+                      <Text color="success">{sushiPer}</Text>
+                    </Box>
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemAvatar
+                      sx={{
+                        minWidth: '46px',
+                        display: 'flex',
+                        alignItems: 'center'
+                      }}
+                    >
+                      
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary="Schnitzel"
+                      primaryTypographyProps={{ variant: 'h5', noWrap: true }}
+                      secondary="A german specialty!"
+                      secondaryTypographyProps={{
+                        variant: 'subtitle2',
+                        noWrap: true
+                      }}
+                    />
+                    <Box>
+                      <Typography align="right" variant="h4" noWrap>
+                        {schnitzelPer}%
+                      </Typography>
+                      <Text color="error">-1.22%</Text>
+                    </Box>
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemAvatar
+                      sx={{
+                        minWidth: '46px',
+                        display: 'flex',
+                        alignItems: 'center'
+                      }}
+                    >
+                     
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary="Barbecue Burger"
+                      primaryTypographyProps={{ variant: 'h5', noWrap: true }}
+                      secondary="American, raw, meaty"
+                      secondaryTypographyProps={{
+                        variant: 'subtitle2',
+                        noWrap: true
+                      }}
+                    />
+                    <Box>
+                      <Typography align="right" variant="h4" noWrap>
+                        {burgerPer}%
+                      </Typography>
+                      <Text color="success">+10.50%</Text>
                     </Box>
                   </ListItem>
                   <ListItem disableGutters>
@@ -144,59 +218,7 @@ function AccountBalance() {
                     />
                     <Box>
                       <Typography align="right" variant="h4" noWrap>
-                        10%
-                      </Typography>
-                      <Text color="error">-1.22%</Text>
-                    </Box>
-                  </ListItem>
-                  <ListItem disableGutters>
-                    <ListItemAvatar
-                      sx={{
-                        minWidth: '46px',
-                        display: 'flex',
-                        alignItems: 'center'
-                      }}
-                    >
-                     
-                    </ListItemAvatar>
-                    <ListItemText
-                      primary="Schnitzel"
-                      primaryTypographyProps={{ variant: 'h5', noWrap: true }}
-                      secondary="A german specialty!"
-                      secondaryTypographyProps={{
-                        variant: 'subtitle2',
-                        noWrap: true
-                      }}
-                    />
-                    <Box>
-                      <Typography align="right" variant="h4" noWrap>
-                        40%
-                      </Typography>
-                      <Text color="success">+10.50%</Text>
-                    </Box>
-                  </ListItem>
-                  <ListItem disableGutters>
-                    <ListItemAvatar
-                      sx={{
-                        minWidth: '46px',
-                        display: 'flex',
-                        alignItems: 'center'
-                      }}
-                    >
-                      
-                    </ListItemAvatar>
-                    <ListItemText
-                      primary="Barbecue Burger"
-                      primaryTypographyProps={{ variant: 'h5', noWrap: true }}
-                      secondary="American, raw, meaty"
-                      secondaryTypographyProps={{
-                        variant: 'subtitle2',
-                        noWrap: true
-                      }}
-                    />
-                    <Box>
-                      <Typography align="right" variant="h4" noWrap>
-                        30%
+                        {greenPer}%
                       </Typography>
                       <Text color="error">-12.38%</Text>
                     </Box>

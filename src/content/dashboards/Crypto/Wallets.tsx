@@ -54,7 +54,11 @@ const CardAddAction = styled(Card)(
 `
 );
 
-function Wallets() {
+function Wallets({sushi, schnitzel, burger, green}) {
+  const sushiPrice = 22.99;
+  const schnitzelPrice = 16.50;
+  const burgerPrice = 12.99;
+  const greenPrice = 18.99;
 
   return (
     <>
@@ -86,10 +90,10 @@ function Wallets() {
               </Typography>
               <Box sx={{ pt: 3 }}>
                 <Typography variant="h3" gutterBottom noWrap>
-                  $3,586.22
+                  ${(sushi* sushiPrice).toFixed(2)}
                 </Typography>
                 <Typography variant="subtitle2" noWrap>
-                  1.25843 BTC
+                  ${sushiPrice}
                 </Typography>
               </Box>
             </CardContent>
@@ -107,10 +111,10 @@ function Wallets() {
               </Typography>
               <Box sx={{ pt: 3 }}>
                 <Typography variant="h3" gutterBottom noWrap>
-                  $586.83
+                  ${(schnitzel * schnitzelPrice).toFixed(2)}
                 </Typography>
                 <Typography variant="subtitle2" noWrap>
-                  5,783 XRP
+                  ${schnitzelPrice}
                 </Typography>
               </Box>
             </CardContent>
@@ -128,10 +132,10 @@ function Wallets() {
               </Typography>
               <Box sx={{ pt: 3 }}>
                 <Typography variant="h3" gutterBottom noWrap>
-                  $54,985.00
+                  ${(burger * burgerPrice).toFixed(2)}
                 </Typography>
                 <Typography variant="subtitle2" noWrap>
-                  34,985 ADA
+                  ${burgerPrice}
                 </Typography>
               </Box>
             </CardContent>
