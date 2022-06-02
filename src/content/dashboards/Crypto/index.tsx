@@ -26,7 +26,10 @@ query {
 
 `
 function DashboardCrypto() {
-  const {data} = useQuery(GET_ORDERS)
+  const {data} = useQuery(GET_ORDERS, {
+   
+    pollInterval: 5000,
+  })
   const [totalSells, setTotalSells] = useState(0)
   const [count, setCount] = useState(0)
   const [totalMeals, setTotalMeals] = useState({
